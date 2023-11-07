@@ -10,21 +10,22 @@ Kelas   : PBP C
 ### Tugas 1
 1. Apa perbedaan utama antara stateless dan stateful widget dalam konteks pengembangan aplikasi Flutter?
 * Stateless Widget
-- Stateless     : Tidak ada perubahan keadaan internal yang dapat terjadi sehingga hanya menggambarkan tampilan berdasarkan propertinya.
-- Immutability  : Stateless widget yang propertinya tidak dapat diubah.
+Stateless     : Tidak ada perubahan keadaan internal yang dapat terjadi sehingga hanya menggambarkan tampilan berdasarkan propertinya.
+Immutability  : Stateless widget yang propertinya tidak dapat diubah.
 
 * Stateful Widget
-- Stateful  : Widget dapat menyimpan keadaan internal yang dapat berubah berdasarkan perubahan keadaan.
-- Mutable:  : Stateful widget dapat memperbarui keadaan internalnya selama widget termasuk dalam tree widget.
+Stateful  : Widget dapat menyimpan keadaan internal yang dapat berubah berdasarkan perubahan keadaan.
+Mutable:  : Stateful widget dapat memperbarui keadaan internalnya selama widget termasuk dalam tree widget.
+
 2. Sebutkan seluruh widget yang kamu gunakan untuk menyelesaikan tugas ini dan jelaskan fungsinya masing-masing.
 * MyApp (Stateless)
-- Sebuah widget root dari aplikasi flutter yang menampilkan widget lainnya
+Sebuah widget root dari aplikasi flutter yang menampilkan widget lainnya
 
 * MyHomePage (Stateless)
-- Sebuah widget homepage sebagai wadah untuk widget tiga button lainnya yang diletakkan dalam MyApp
+Sebuah widget homepage sebagai wadah untuk widget tiga button lainnya yang diletakkan dalam MyApp
 
 * GameCard (Stateless)
-- Sebuah widget untuk membentuk button dengan warnanya masing - masing sesuai dengan inisialisasi dalam GameItem
+Sebuah widget untuk membentuk button dengan warnanya masing - masing sesuai dengan inisialisasi dalam GameItem
 
 3. Langkah Tugas 1
 - Bentuk Folder flutter
