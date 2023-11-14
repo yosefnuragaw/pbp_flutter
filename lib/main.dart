@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pbp_flutter/home.dart';
+import 'package:pbp_flutter/screens/home.dart';
 
 
 void main() {
