@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:pbp_django_auth/pbp_django_auth.dart';
 import 'package:pbp_flutter/screens/home.dart';
+import 'package:pbp_flutter/screens/login.dart';
+import 'package:provider/provider.dart';
 
 
 void main() {
@@ -12,13 +15,18 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
-        useMaterial3: true,
-      ),
-      home:  MyHomePage(),
-    );
+  return Provider(
+              create: (_) {
+                  CookieRequest request = CookieRequest();
+                  return request;
+              },
+              child: MaterialApp(
+                  title: 'GameStock',
+                  theme: ThemeData(
+                      colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
+                      useMaterial3: true,
+                  ),
+                  home: const LoginPage()),
+              );
+      }
   }
-}

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:pbp_flutter/screens/home.dart';
 import 'package:pbp_flutter/screens/form.dart';
+import 'package:pbp_flutter/screens/list_game.dart';
 
 class LeftDrawer extends StatelessWidget {
-  const LeftDrawer({super.key});
+  final int id;
+  const LeftDrawer({required this.id, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +47,7 @@ class LeftDrawer extends StatelessWidget {
             Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => MyHomePage(),
+                  builder: (context) => MyHomePage(id : id),
                 ));
           },
           ),
@@ -56,10 +58,20 @@ class LeftDrawer extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => const GameForm(),
+                  builder: (context) => GameForm(id : id),
 
                 ));
           },
+          ),
+          ListTile(
+              leading: const Icon(Icons.shopping_basket),
+              title: const Text('Daftar Produk'),
+              onTap: () {
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) =>  ProductPage(id : id)),
+                  );
+              },
           ),
         ],
       ),

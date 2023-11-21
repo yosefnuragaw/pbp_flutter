@@ -4,7 +4,8 @@ import 'package:pbp_flutter/screens/form.dart';
 import 'package:pbp_flutter/widget/home_card.dart';
 
 class MyHomePage extends StatelessWidget {
-    MyHomePage({Key? key}) : super(key: key);
+    final int id ;
+    MyHomePage({Key? key,required this.id}) : super(key: key);
 
     final List<GameItem> items = [
       GameItem("Lihat Game", Icons.checklist,const Color.fromARGB(255, 91, 181, 63)),
@@ -20,7 +21,7 @@ class MyHomePage extends StatelessWidget {
           'Game Stock',
         ),
       ),
-      drawer: const LeftDrawer(),
+      drawer:  LeftDrawer(id : id),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(10.0), 
@@ -47,7 +48,7 @@ class MyHomePage extends StatelessWidget {
                 shrinkWrap: true,
                 children: items.map((GameItem item) {
                   // Iterasi untuk setiap item
-                  return GameCard(item);
+                  return GameCard(item,id);
                 }).toList(),
               ),
             ],
